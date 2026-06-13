@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kitchen Alchemist</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+  <main class="page-shell">
+    <section class="hero-card">
+      <div class="hero-copy">
+        <span class="eyebrow">Kitchen Alchemist</span>
+        <h1>Turn random ingredients into a custom recipe.</h1>
+        <p>Type the items in your kitchen and let the app suggest a warm, organic meal idea with a sunset nature vibe.</p>
+      </div>
+
+      <form id="ingredient-form" class="ingredient-form">
+        <div id="input-wrapper">
+          <label for="ingredients">What do you have?</label>
+          <input id="ingredients" name="ingredients" type="text" placeholder="e.g. zucchini, lemon, chickpeas" />
+        </div>
+        <button id="submit-btn" type="submit">Create Recipe</button>
+      </form>
+
+      <div id="result-card" class="result-card hidden" style ="background: linear-gradient(180deg, rgba(255,255,255,0.96) 0%, rgba(242,238,222,0.98) 100%) !important; border: 1px solid rgba(163, 187, 120, 0.24) !important;">
+        <h2 id="recipe-title"></h2>
+        <p id="recipe-description"></p>
+        <div class="recipe-section">
+          <h3>Ingredients</h3>
+          <ul id="recipe-ingredients"></ul>
+        </div>
+        <div class="recipe-section">
+          <h3>Steps</h3>
+          <ol id="recipe-steps"></ol>
+        </div>
+        
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="{{ url_for('static', filename='js/app.js') }}?v=1"></script>
+</body>
+</html>
+
